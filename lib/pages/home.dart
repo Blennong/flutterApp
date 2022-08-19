@@ -17,19 +17,19 @@ class Home extends StatelessWidget {
         title: const Text("MI APP INUTIL"),
       ),
       body: Center(
-        child: Column(
-          children: const [
-            ProductCard(),
-            // Container(
-            //   child: ProductCard2(),
-            // ),
-            // Container(
-            //   child: ProductCard3(),
-            // ),
-            // Container(
-            //   child: ProductCard4(),
-            // )
-          ]
+        child: SingleChildScrollView(
+          child: Column(
+            children: const [
+              ProductCard(),
+              
+              ProductCard(),
+              
+              ProductCard(),
+              
+              ProductCard(),
+              
+            ]
+          ),
         ),
       ),
     );

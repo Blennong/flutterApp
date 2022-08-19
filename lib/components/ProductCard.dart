@@ -1,7 +1,6 @@
+// ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:solemne1/pages/productCardDetail1.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({Key? key}) : super(key: key);
