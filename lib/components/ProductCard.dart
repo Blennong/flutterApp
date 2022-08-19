@@ -36,11 +36,11 @@ class ProductCard extends StatelessWidget {
                   Text(
                     'JBL',
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,
                     )
                   ),
-                  SizedBox(width: 140,),
+                  SizedBox(width: 230,),
                   Icon(Icons.favorite)
                 ],
               ),
@@ -50,7 +50,7 @@ class ProductCard extends StatelessWidget {
                   Text(
                     'Audifonos headset JBL',
                     style: TextStyle(
-                      fontSize: 14,
+                      fontSize: 16,
                     ),
                   )
                 ],
@@ -61,34 +61,34 @@ class ProductCard extends StatelessWidget {
                   Icon(
                     Icons.star,
                     color: Colors.amber,
-                    size: 18,
+                    size: 20,
                   ),
                   Icon(
                     Icons.star,
                     color: Colors.amber,
-                    size: 18,
+                    size: 20,
                   ),
                   Icon(
                     Icons.star,
                     color: Colors.amber,
-                    size: 18,
+                    size: 20,
                   ),
                   Icon(
                     Icons.star,
                     color: Colors.amber,
-                    size: 18,
+                    size: 20,
                   ),
                   Icon(
                     Icons.star,
                     color: Colors.amber,
-                    size: 18,
+                    size: 20,
                   ),
                   SizedBox(width: 5),
                   Text(
                     '(5 calificaciones)',
                     style: TextStyle(
                       color: Colors.grey,
-                      fontSize: 12,
+                      fontSize: 14,
                     ),
                     textAlign: TextAlign.end,
                     
@@ -101,7 +101,7 @@ class ProductCard extends StatelessWidget {
                   Text(
                     '1000000',
                     style: TextStyle(
-                      fontSize: 14,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold
                     ),
                   )
@@ -113,7 +113,7 @@ class ProductCard extends StatelessWidget {
                   Text(
                     '90000',
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Colors.red
                     )

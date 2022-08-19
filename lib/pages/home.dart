@@ -20,14 +20,14 @@ class Home extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: const [
+              SizedBox(height: 20,),
               ProductCard(),
-              
+              SizedBox(height: 20,),
               ProductCard(),
-              
+              SizedBox(height: 20,),
               ProductCard(),
-              
-              ProductCard(),
-              
+              SizedBox(height: 20,),
+              ProductCard(), 
             ]
           ),
         ),

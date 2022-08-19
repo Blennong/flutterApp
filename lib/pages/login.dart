@@ -23,16 +23,30 @@ class Login extends StatelessWidget {
               ),
               child: Column(
                 children: [
+                  const SizedBox(height:65),
                   _userTextField(),
+                  const SizedBox(height:65),
                   _passwordTextField()
                 ]
               ),
             ),
             Container(
               width: 300,
-              margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+              margin: const EdgeInsets.fromLTRB(0, 40, 0, 0),
               child: ElevatedButton(
-                child: const Text('Acceder'),
+                style: ButtonStyle(
+                  padding: MaterialStateProperty.all<EdgeInsets>(const EdgeInsets.fromLTRB(0, 20, 0, 20)),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)
+                    )
+                  )
+                ),
+                child: const Text(
+                  'Acceder',
+                  style: TextStyle(
+                    fontSize: 30,
+                  ),),
                 onPressed: () {
                   Navigator.pushNamed(context, '/home');
                 },
@@ -82,11 +96,13 @@ class Login extends StatelessWidget {
       ),
 
       child: TextField(
+        
         decoration: InputDecoration(
+          hintText: 'USUARIO',
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15)
           ),
-          prefixIcon: const Icon(Icons.person_outline),
+          // prefixIcon: const Icon(Icons.person_outline),
         ),
       ),
     );
@@ -104,10 +120,11 @@ class Login extends StatelessWidget {
 
       child: TextField(
         decoration: InputDecoration(
+          hintText: 'PASSWORD',
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15)
           ),
-          prefixIcon: const Icon(Icons.password_outlined),
+          // prefixIcon: const Icon(Icons.password_outlined),
         ),
       ),
     );

@@ -16,7 +16,8 @@ class MyApp extends StatelessWidget {
       // title: 'Solemne 1',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.red
+        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.lightBlueAccent
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
       initialRoute: '/',
