@@ -17,9 +17,9 @@ class Home extends StatelessWidget {
         title: const Text("MI APP INUTIL"),
       ),
       body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            children: const [
+        child: ListView(
+          controller: ScrollController(),
+          children: const [
               SizedBox(height: 20,),
               ProductCard(),
               SizedBox(height: 20,),
@@ -31,7 +31,6 @@ class Home extends StatelessWidget {
             ]
           ),
         ),
-      ),
     );
   }
 }

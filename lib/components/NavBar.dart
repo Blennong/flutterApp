@@ -8,6 +8,7 @@ class NavBar extends StatelessWidget {
     return Drawer(
       backgroundColor: Colors.lightBlueAccent,
       child: ListView(
+        controller: ScrollController(),
         children: [
           const SizedBox(height: 30,),
           ElevatedButton(

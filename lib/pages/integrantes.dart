@@ -14,7 +14,7 @@ class Integrantes extends StatelessWidget {
 
         child: Column(
           children: [
-            SizedBox(height: 200,),
+            const SizedBox(height: 200,),
             Row(
               children: const [
                 SizedBox(width: 20,),

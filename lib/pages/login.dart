@@ -1,4 +1,5 @@
 
+import 'package:cool_alert/cool_alert.dart';
 import 'package:flutter/material.dart';
 import 'package:solemne1/pages/home.dart';
 // import 'package:solemne1/pages/NavBar.dart';
@@ -70,7 +71,13 @@ class Login extends StatelessWidget {
     if(user=="unab"&& pass=="unab2022"){
       Navigator.pushNamed(context, '/home');
     }else{
-      //Enviar mensaje de error
+      CoolAlert.show(
+          context: context,
+          type: CoolAlertType.error,
+          title: 'Oops...',
+          text: 'Creadenciales inválidas, intente nuevamente...',
+          loopAnimation: false,
+        );
     }
   }
 
