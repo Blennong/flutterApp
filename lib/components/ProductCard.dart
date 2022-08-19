@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:solemne1/pages/productCardDetail1.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({Key? key}) : super(key: key);
@@ -14,11 +15,19 @@ class ProductCard extends StatelessWidget {
           child: Column(
             children: [
               Row(
-                children: const [
-                Image(
-                  image: AssetImage('assets/audifonosjpg.jpg'),
-                  width: 300,
-                  height: 200,
+                children: [
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ProductCardDetail1())
+                );
+                  },
+                  child: const Image(
+                    image: AssetImage('assets/audifonosjpg.jpg'),
+                    width: 300,
+                    height: 200,
+                  ),
                 )],
               ),
               Row(
