@@ -1,9 +1,14 @@
+
 import 'package:flutter/material.dart';
 import 'package:solemne1/pages/home.dart';
 // import 'package:solemne1/pages/NavBar.dart';
 
 class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+  Login({Key? key}) : super(key: key);
+
+  TextEditingController user = new TextEditingController();
+  TextEditingController pass = new TextEditingController();
+  
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +53,8 @@ class Login extends StatelessWidget {
                     fontSize: 30,
                   ),),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/home');
+                  validacion(user.text, pass.text, context);
+                  // Navigator.pushNamed(context, '/home');
                 },
               ),
             )
@@ -57,32 +63,15 @@ class Login extends StatelessWidget {
       ),
 
     );
-  }
 
-  Column body1(BuildContext context) {
-    return Column(
-      children: [
-        Center(
-          child: Container(
-            width: 300,
-            height: 300,
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.circular(20),
-              
-            ),
-          ),           
-        ),
-        Center(
-        child: ElevatedButton(
-        onPressed: () {
-          Navigator.pushNamed(context, '/home');
-        },
-        child: const Text('Acceder'),
-      ),
-    ),
-      ],
-    );
+    
+  }
+  void validacion(String user, String pass, BuildContext context) {
+    if(user=="unab"&& pass=="unab2022"){
+      Navigator.pushNamed(context, '/home');
+    }else{
+      //Enviar mensaje de error
+    }
   }
 
   Widget _userTextField() {
@@ -96,7 +85,7 @@ class Login extends StatelessWidget {
       ),
 
       child: TextField(
-        
+        controller: user,
         decoration: InputDecoration(
           hintText: 'USUARIO',
           border: OutlineInputBorder(
@@ -119,6 +108,7 @@ class Login extends StatelessWidget {
       ),
 
       child: TextField(
+        controller: pass,
         decoration: InputDecoration(
           hintText: 'PASSWORD',
           border: OutlineInputBorder(
@@ -130,7 +120,4 @@ class Login extends StatelessWidget {
     );
   }
 
-  _submitButton() {
-
-  }
 }
